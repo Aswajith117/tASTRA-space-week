@@ -3,289 +3,169 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>TASTRA Space Week 2026</title>
 
 <style>
 *{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
-  margin:0;
-  background:#050914;
-  color:#fff;
-  font-family:Arial,sans-serif;
+    margin:0;
+    background:#050914;
+    color:#fff;
+    font-family:Arial,sans-serif
 }
 
 .hero{
-  text-align:center;
-  padding:42px 18px 30px;
-  background:radial-gradient(circle at 50% 0,#12345f,#07111f 45%,#050914 80%);
+    text-align:center;
+    padding:42px 18px 30px;
+    background:radial-gradient(
+        circle at 50% 0,
+        #12345f,
+        #07111f 45%,
+        #050914 80%
+    )
 }
 
 .badge{
-  display:inline-block;
-  border:1px solid #258cff;
-  border-radius:30px;
-  padding:7px 14px;
-  color:#59aaff;
-  font-size:12px;
-  letter-spacing:2px;
+    display:inline-block;
+    border:1px solid #258cff;
+    border-radius:30px;
+    padding:7px 14px;
+    color:#59aaff;
+    font-size:12px;
+    letter-spacing:2px
 }
 
 h1{
-  font-size:40px;
-  letter-spacing:3px;
-  margin:18px 0 6px;
+    font-size:40px;
+    letter-spacing:3px;
+    margin:18px 0 6px
 }
 
 h2{
-  font-size:15px;
-  font-weight:400;
-  color:#b8c8dd;
-  letter-spacing:2px;
+    font-size:15px;
+    font-weight:400;
+    color:#b8c8dd;
+    letter-spacing:2px
 }
 
 .tag{
-  color:#36a0ff;
-  font-weight:bold;
-  letter-spacing:4px;
+    color:#36a0ff;
+    font-weight:bold;
+    letter-spacing:4px
 }
 
 .info{
-  display:flex;
-  justify-content:center;
-  gap:9px;
-  flex-wrap:wrap;
-  margin-top:24px;
+    display:flex;
+    justify-content:center;
+    gap:9px;
+    flex-wrap:wrap;
+    margin-top:24px
 }
 
 .info span{
-  border:1px solid #29425e;
-  border-radius:10px;
-  padding:10px 12px;
-  font-size:12px;
-  color:#dbe8f7;
+    border:1px solid #29425e;
+    border-radius:10px;
+    padding:10px 12px;
+    font-size:12px;
+    color:#dbe8f7
 }
 
 .wrap{
-  max-width:960px;
-  margin:auto;
-  padding:26px 16px 50px;
+    max-width:960px;
+    margin:auto;
+    padding:26px 16px 50px
 }
 
 .title{
-  text-align:center;
-  color:#52a8ff;
-  letter-spacing:3px;
+    text-align:center;
+    color:#52a8ff;
+    letter-spacing:3px
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:15px;
+    display:grid;
+    grid-template-columns:repeat(
+        auto-fit,
+        minmax(260px,1fr)
+    );
+    gap:15px
 }
 
 .card{
-  background:linear-gradient(145deg,#0b1627,#08101c);
-  border:1px solid #203a58;
-  border-radius:16px;
-  padding:20px;
-  transition:transform .2s,border-color .2s;
-}
-
-.card:hover{
-  transform:translateY(-3px);
-  border-color:#2d83d8;
+    background:linear-gradient(
+        145deg,
+        #0b1627,
+        #08101c
+    );
+    border:1px solid #203a58;
+    border-radius:16px;
+    padding:20px
 }
 
 .num{
-  color:#52a8ff;
-  font-size:12px;
-  letter-spacing:2px;
+    color:#52a8ff;
+    font-size:12px;
+    letter-spacing:2px
 }
 
 .card h3{
-  font-size:19px;
-  margin:8px 0 11px;
+    font-size:19px;
+    margin:8px 0 11px
 }
 
 .meta{
-  color:#b6c5d7;
-  font-size:13px;
-  line-height:1.7;
+    color:#b6c5d7;
+    font-size:13px;
+    line-height:1.7
 }
 
 .buttons{
-  display:flex;
-  gap:8px;
-  margin-top:16px;
+    display:flex;
+    gap:8px;
+    margin-top:16px
 }
 
 .btn{
-  flex:1;
-  text-align:center;
-  text-decoration:none;
-  padding:10px;
-  border-radius:9px;
-  font-weight:bold;
-  font-size:13px;
-  cursor:pointer;
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    padding:10px;
+    border-radius:9px;
+    font-weight:bold;
+    font-size:13px
 }
 
 .details{
-  border:1px solid #2d83d8;
-  color:#71baff;
-  background:transparent;
+    border:1px solid #2d83d8;
+    color:#71baff
 }
 
 .register{
-  background:#1686ff;
-  color:white;
-  border:1px solid #1686ff;
-}
-
-.disabled{
-  opacity:.45;
-  cursor:not-allowed;
+    background:#1686ff;
+    color:white
 }
 
 .note{
-  text-align:center;
-  color:#8497ad;
-  font-size:12px;
-  line-height:1.6;
-  margin-top:30px;
+    text-align:center;
+    color:#8497ad;
+    font-size:12px;
+    line-height:1.6;
+    margin-top:30px
 }
 
 footer{
-  text-align:center;
-  padding:24px;
-  border-top:1px solid #16263a;
-  color:#778aa1;
-  font-size:12px;
-}
-
-
-/* POPUP */
-
-.modal{
-  display:none;
-  position:fixed;
-  z-index:9999;
-  inset:0;
-  background:rgba(0,0,0,.78);
-  padding:20px;
-  align-items:center;
-  justify-content:center;
-}
-
-.modal.active{
-  display:flex;
-}
-
-.modal-box{
-  width:100%;
-  max-width:520px;
-  max-height:85vh;
-  overflow-y:auto;
-  background:linear-gradient(145deg,#0c1b2f,#07101c);
-  border:1px solid #2d83d8;
-  border-radius:18px;
-  padding:25px;
-  position:relative;
-  box-shadow:0 15px 50px rgba(0,0,0,.5);
-}
-
-.close{
-  position:absolute;
-  right:16px;
-  top:12px;
-  width:36px;
-  height:36px;
-  border:1px solid #29425e;
-  border-radius:50%;
-  background:#101c2c;
-  color:white;
-  font-size:22px;
-  cursor:pointer;
-}
-
-.modal-number{
-  color:#52a8ff;
-  font-size:12px;
-  letter-spacing:2px;
-}
-
-.modal-box h3{
-  font-size:25px;
-  margin:10px 40px 18px 0;
-}
-
-.modal-box p{
-  color:#b9c9da;
-  line-height:1.7;
-  font-size:14px;
-}
-
-.modal-info{
-  margin-top:18px;
-  border-top:1px solid #203a58;
-  padding-top:15px;
-}
-
-.modal-info div{
-  padding:7px 0;
-  color:#dce8f5;
-  font-size:14px;
-}
-
-.modal-register{
-  display:block;
-  margin-top:20px;
-  text-align:center;
-  background:#1686ff;
-  color:white;
-  text-decoration:none;
-  padding:12px;
-  border-radius:9px;
-  font-weight:bold;
-}
-
-@media(max-width:600px){
-
-  h1{
-    font-size:30px;
-  }
-
-  h2{
-    font-size:12px;
-  }
-
-  .tag{
-    font-size:13px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .modal{
-    padding:14px;
-  }
-
-  .modal-box{
-    padding:22px;
-  }
+    text-align:center;
+    padding:24px;
+    border-top:1px solid #16263a;
+    color:#778aa1;
+    font-size:12px
 }
 </style>
 </head>
 
-
 <body>
-
 
 <header class="hero">
 
@@ -293,7 +173,9 @@ footer{
 NATIONAL SPACE DAY 2026
 </div>
 
-<h1>TASTRA SPACE WEEK</h1>
+<h1>
+TASTRA SPACE WEEK
+</h1>
 
 <h2>
 TOMS AERONAUTICAL STUDENTS TECHNICAL RESEARCH ASSOCIATION
@@ -322,13 +204,17 @@ COMPETITIONS
 <div class="grid">
 
 
-<!-- EVENT 01 -->
+<!-- 01 SPACE QUIZ -->
 
 <article class="card">
 
-<div class="num">01 · 17 AUG</div>
+<div class="num">
+01 · 17 AUG
+</div>
 
-<h3>🚀 Space Quiz</h3>
+<h3>
+🚀 Space Quiz
+</h3>
 
 <div class="meta">
 Team of 2 · B Block<br>
@@ -337,13 +223,15 @@ Two-round space quiz
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('quiz')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register"
-href="https://forms.gle/bYhP9L4bdH9RoaKB8">
+<a
+class="btn register"
+href="https://forms.gle/bYhP9L4bdH9RoaKB8"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -352,13 +240,18 @@ Register
 </article>
 
 
-<!-- EVENT 02 -->
+
+<!-- 02 DRAWING -->
 
 <article class="card">
 
-<div class="num">02 · 17 AUG</div>
+<div class="num">
+02 · 17 AUG
+</div>
 
-<h3>🎨 Space-Themed Drawing</h3>
+<h3>
+🎨 Space-Themed Drawing
+</h3>
 
 <div class="meta">
 Individual event<br>
@@ -367,13 +260,15 @@ Drawing competition
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('drawing')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register disabled"
-href="javascript:void(0)">
+<a
+class="btn register"
+href="https://forms.gle/8Rf9hkwh74ukqHMw8"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -382,13 +277,18 @@ Register
 </article>
 
 
-<!-- EVENT 03 -->
+
+<!-- 03 ESSAY -->
 
 <article class="card">
 
-<div class="num">03 · 17 AUG</div>
+<div class="num">
+03 · 17 AUG
+</div>
 
-<h3>✍️ Space Essay Writing</h3>
+<h3>
+✍️ Space Essay Writing
+</h3>
 
 <div class="meta">
 Individual event<br>
@@ -397,13 +297,15 @@ Essay writing competition
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('essay')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register disabled"
-href="javascript:void(0)">
+<a
+class="btn register"
+href="https://docs.google.com/forms/d/e/1FAIpQLSf9Ial7dUTlbqWFKbhZ_cy-nSlITwsDe5y6oq4DpbNck6Kw1A/viewform?usp=header"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -412,13 +314,18 @@ Register
 </article>
 
 
-<!-- EVENT 04 -->
+
+<!-- 04 IDEATHON -->
 
 <article class="card">
 
-<div class="num">04 · 17 AUG</div>
+<div class="num">
+04 · 17 AUG
+</div>
 
-<h3>💡 Space-Tech Ideathon</h3>
+<h3>
+💡 Space-Tech Ideathon
+</h3>
 
 <div class="meta">
 Team event · 2–4 members<br>
@@ -427,13 +334,15 @@ Space technology & innovation
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('ideathon')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register disabled"
-href="javascript:void(0)">
+<a
+class="btn register"
+href="https://forms.gle/MS4AsJNnWpMmfTbv5"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -442,13 +351,18 @@ Register
 </article>
 
 
-<!-- EVENT 05 -->
+
+<!-- 05 DEBATE -->
 
 <article class="card">
 
-<div class="num">05 · 18 AUG</div>
+<div class="num">
+05 · 18 AUG
+</div>
 
-<h3>🗣️ Space Debate</h3>
+<h3>
+🗣️ Space Debate
+</h3>
 
 <div class="meta">
 Individual event<br>
@@ -457,13 +371,15 @@ Space & technology debate
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('debate')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register disabled"
-href="javascript:void(0)">
+<a
+class="btn register"
+href="https://forms.gle/viNzJVvpwt6WWpG58"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -472,13 +388,18 @@ Register
 </article>
 
 
-<!-- EVENT 06 -->
+
+<!-- 06 PHOTOGRAPHY -->
 
 <article class="card">
 
-<div class="num">06 · 18 AUG</div>
+<div class="num">
+06 · 18 AUG
+</div>
 
-<h3>📷 Space Photography Contest</h3>
+<h3>
+📷 Space Photography Contest
+</h3>
 
 <div class="meta">
 Individual event · Upload photograph<br>
@@ -487,13 +408,15 @@ Space-themed photography
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('photography')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register disabled"
-href="javascript:void(0)">
+<a
+class="btn register"
+href="https://forms.gle/ZR4XRa4ncuvz1FfGA"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -502,13 +425,18 @@ Register
 </article>
 
 
-<!-- EVENT 07 -->
+
+<!-- 07 REEL -->
 
 <article class="card">
 
-<div class="num">07 · 18 AUG</div>
+<div class="num">
+07 · 18 AUG
+</div>
 
-<h3>🎬 Space Reel Competition</h3>
+<h3>
+🎬 Space Reel Competition
+</h3>
 
 <div class="meta">
 Individual event · Upload video<br>
@@ -517,13 +445,15 @@ Space-themed short reel
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('reel')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register disabled"
-href="javascript:void(0)">
+<a
+class="btn register"
+href="https://forms.gle/WW3yd9pvquCDV26Z9"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -532,13 +462,18 @@ Register
 </article>
 
 
-<!-- EVENT 08 -->
+
+<!-- 08 TREASURE HUNT -->
 
 <article class="card">
 
-<div class="num">08 · 18 AUG</div>
+<div class="num">
+08 · 18 AUG
+</div>
 
-<h3>🔎 Engineering Space Treasure Hunt</h3>
+<h3>
+🔎 Engineering Space Treasure Hunt
+</h3>
 
 <div class="meta">
 Team event · 3–5 members<br>
@@ -547,13 +482,15 @@ Clues, decoding & space challenges
 
 <div class="buttons">
 
-<button class="btn details"
-onclick="openModal('treasure')">
+<a class="btn details" href="#">
 View Details
-</button>
+</a>
 
-<a class="btn register disabled"
-href="javascript:void(0)">
+<a
+class="btn register"
+href="https://forms.gle/r8FbuGRvDFubPuyP7"
+target="_blank"
+rel="noopener noreferrer">
 Register
 </a>
 
@@ -575,227 +512,6 @@ One hub for posters, rules, venues and registration.
 <footer>
 TASTRA · National Space Day 2026
 </footer>
-
-
-
-<!-- POPUP -->
-
-<div class="modal" id="eventModal">
-
-<div class="modal-box">
-
-<button class="close" onclick="closeModal()">
-×
-</button>
-
-<div class="modal-number" id="modalNumber">
-EVENT
-</div>
-
-<h3 id="modalTitle">
-Event
-</h3>
-
-<p id="modalDescription">
-Event details
-</p>
-
-<div class="modal-info">
-
-<div id="modalDate">
-📅 Date:
-</div>
-
-<div id="modalType">
-👤 Type:
-</div>
-
-<div id="modalVenue">
-📍 Venue:
-</div>
-
-<div id="modalTime">
-⏰ Time:
-</div>
-
-</div>
-
-<a
-id="modalRegister"
-class="modal-register"
-href="#"
->
-Register
-</a>
-
-</div>
-
-</div>
-
-
-
-<script>
-
-const events = {
-
-quiz:{
-number:"01 · 17 AUG",
-title:"🚀 Space Quiz",
-description:"Test your knowledge of astronomy, space exploration, spacecraft, satellites, missions and the future of space technology.",
-date:"17 August 2026",
-type:"Team of 2",
-venue:"B Block",
-time:"2:00 PM – 4:00 PM",
-register:"https://forms.gle/bYhP9L4bdH9RoaKB8"
-},
-
-drawing:{
-number:"02 · 17 AUG",
-title:"🎨 Space-Themed Drawing",
-description:"Show your creativity through a space-themed drawing inspired by astronomy, planets, spacecraft, exploration or the future of humanity in space.",
-date:"17 August 2026",
-type:"Individual event",
-venue:"To be announced",
-time:"2:00 PM – 4:00 PM",
-register:"#"
-},
-
-essay:{
-number:"03 · 17 AUG",
-title:"✍️ Space Essay Writing",
-description:"Express your ideas and knowledge through an engaging essay based on space science, exploration, technology or humanity's future beyond Earth.",
-date:"17 August 2026",
-type:"Individual event",
-venue:"To be announced",
-time:"2:00 PM – 4:00 PM",
-register:"#"
-},
-
-ideathon:{
-number:"04 · 17 AUG",
-title:"💡 Space-Tech Ideathon",
-description:"Develop and present an innovative idea that can solve a real-world challenge using space technology, aerospace engineering or related technologies.",
-date:"17 August 2026",
-type:"Team of 2–4 members",
-venue:"To be announced",
-time:"2:00 PM – 4:00 PM",
-register:"#"
-},
-
-debate:{
-number:"05 · 18 AUG",
-title:"🗣️ Space Debate",
-description:"Put your communication, reasoning and technical knowledge to the test through a structured debate on space and emerging technologies.",
-date:"18 August 2026",
-type:"Individual event",
-venue:"To be announced",
-time:"2:00 PM – 4:00 PM",
-register:"#"
-},
-
-photography:{
-number:"06 · 18 AUG",
-title:"📷 Space Photography Contest",
-description:"Capture and submit a photograph connected to space, astronomy, the night sky, science or the human connection with the universe.",
-date:"18 August 2026",
-type:"Individual event",
-venue:"Online submission",
-time:"Submission-based",
-register:"#"
-},
-
-reel:{
-number:"07 · 18 AUG",
-title:"🎬 Space Reel Competition",
-description:"Create a short, engaging reel based on space science, astronomy, aerospace, exploration or an inspiring space-related concept.",
-date:"18 August 2026",
-type:"Individual event",
-venue:"Online submission",
-time:"Submission-based",
-register:"#"
-},
-
-treasure:{
-number:"08 · 18 AUG",
-title:"🔎 Engineering Space Treasure Hunt",
-description:"Work as a team to solve clues, decode challenges and complete engineering and space-themed tasks. Speed, logic and teamwork matter.",
-date:"18 August 2026",
-type:"Team of 3–5 members",
-venue:"To be announced",
-time:"2:00 PM – 4:00 PM",
-register:"#"
-}
-
-};
-
-
-function openModal(eventName){
-
-const event = events[eventName];
-
-document.getElementById("modalNumber").textContent = event.number;
-document.getElementById("modalTitle").textContent = event.title;
-document.getElementById("modalDescription").textContent = event.description;
-
-document.getElementById("modalDate").textContent =
-"📅 Date: " + event.date;
-
-document.getElementById("modalType").textContent =
-"👤 Type: " + event.type;
-
-document.getElementById("modalVenue").textContent =
-"📍 Venue: " + event.venue;
-
-document.getElementById("modalTime").textContent =
-"⏰ Time: " + event.time;
-
-const registerButton =
-document.getElementById("modalRegister");
-
-if(event.register === "#"){
-
-registerButton.style.display = "none";
-
-}else{
-
-registerButton.style.display = "block";
-registerButton.href = event.register;
-
-}
-
-document.getElementById("eventModal")
-.classList.add("active");
-
-}
-
-
-function closeModal(){
-
-document.getElementById("eventModal")
-.classList.remove("active");
-
-}
-
-
-document.getElementById("eventModal")
-.addEventListener("click",function(e){
-
-if(e.target === this){
-closeModal();
-}
-
-});
-
-
-document.addEventListener("keydown",function(e){
-
-if(e.key === "Escape"){
-closeModal();
-}
-
-});
-
-</script>
 
 
 </body>
