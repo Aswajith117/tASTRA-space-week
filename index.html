@@ -3,169 +3,329 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>TASTRA Space Week 2026</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
-    margin:0;
-    background:#050914;
-    color:#fff;
-    font-family:Arial,sans-serif
+  margin:0;
+  background:#050914;
+  color:#fff;
+  font-family:Arial,sans-serif;
 }
 
 .hero{
-    text-align:center;
-    padding:42px 18px 30px;
-    background:radial-gradient(
-        circle at 50% 0,
-        #12345f,
-        #07111f 45%,
-        #050914 80%
-    )
+  text-align:center;
+  padding:42px 18px 30px;
+  background:radial-gradient(
+    circle at 50% 0,
+    #12345f,
+    #07111f 45%,
+    #050914 80%
+  );
 }
 
 .badge{
-    display:inline-block;
-    border:1px solid #258cff;
-    border-radius:30px;
-    padding:7px 14px;
-    color:#59aaff;
-    font-size:12px;
-    letter-spacing:2px
+  display:inline-block;
+  border:1px solid #258cff;
+  border-radius:30px;
+  padding:7px 14px;
+  color:#59aaff;
+  font-size:12px;
+  letter-spacing:2px;
 }
 
 h1{
-    font-size:40px;
-    letter-spacing:3px;
-    margin:18px 0 6px
+  font-size:40px;
+  letter-spacing:3px;
+  margin:18px 0 6px;
 }
 
-h2{
-    font-size:15px;
-    font-weight:400;
-    color:#b8c8dd;
-    letter-spacing:2px
+.hero h2{
+  font-size:15px;
+  font-weight:400;
+  color:#b8c8dd;
+  letter-spacing:2px;
 }
 
 .tag{
-    color:#36a0ff;
-    font-weight:bold;
-    letter-spacing:4px
+  color:#36a0ff;
+  font-weight:bold;
+  letter-spacing:4px;
 }
 
 .info{
-    display:flex;
-    justify-content:center;
-    gap:9px;
-    flex-wrap:wrap;
-    margin-top:24px
+  display:flex;
+  justify-content:center;
+  gap:9px;
+  flex-wrap:wrap;
+  margin-top:24px;
 }
 
 .info span{
-    border:1px solid #29425e;
-    border-radius:10px;
-    padding:10px 12px;
-    font-size:12px;
-    color:#dbe8f7
+  border:1px solid #29425e;
+  border-radius:10px;
+  padding:10px 12px;
+  font-size:12px;
+  color:#dbe8f7;
 }
 
 .wrap{
-    max-width:960px;
-    margin:auto;
-    padding:26px 16px 50px
+  max-width:960px;
+  margin:auto;
+  padding:26px 16px 50px;
 }
 
 .title{
-    text-align:center;
-    color:#52a8ff;
-    letter-spacing:3px
+  text-align:center;
+  color:#52a8ff;
+  letter-spacing:3px;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(
-        auto-fit,
-        minmax(260px,1fr)
-    );
-    gap:15px
+  display:grid;
+  grid-template-columns:repeat(
+    auto-fit,
+    minmax(260px,1fr)
+  );
+  gap:15px;
 }
 
 .card{
-    background:linear-gradient(
-        145deg,
-        #0b1627,
-        #08101c
-    );
-    border:1px solid #203a58;
-    border-radius:16px;
-    padding:20px
+  background:linear-gradient(
+    145deg,
+    #0b1627,
+    #08101c
+  );
+  border:1px solid #203a58;
+  border-radius:16px;
+  padding:20px;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  border-color:#2d83d8;
 }
 
 .num{
-    color:#52a8ff;
-    font-size:12px;
-    letter-spacing:2px
+  color:#52a8ff;
+  font-size:12px;
+  letter-spacing:2px;
 }
 
 .card h3{
-    font-size:19px;
-    margin:8px 0 11px
+  font-size:19px;
+  margin:8px 0 11px;
 }
 
 .meta{
-    color:#b6c5d7;
-    font-size:13px;
-    line-height:1.7
+  color:#b6c5d7;
+  font-size:13px;
+  line-height:1.7;
 }
 
 .buttons{
-    display:flex;
-    gap:8px;
-    margin-top:16px
+  display:flex;
+  gap:8px;
+  margin-top:16px;
 }
 
 .btn{
-    flex:1;
-    text-align:center;
-    text-decoration:none;
-    padding:10px;
-    border-radius:9px;
-    font-weight:bold;
-    font-size:13px
+  flex:1;
+  text-align:center;
+  text-decoration:none;
+  padding:10px;
+  border-radius:9px;
+  font-weight:bold;
+  font-size:13px;
+  cursor:pointer;
+  font-family:Arial,sans-serif;
 }
 
 .details{
-    border:1px solid #2d83d8;
-    color:#71baff
+  border:1px solid #2d83d8;
+  color:#71baff;
+  background:transparent;
 }
 
 .register{
-    background:#1686ff;
-    color:white
+  background:#1686ff;
+  color:white;
+  border:1px solid #1686ff;
 }
 
 .note{
-    text-align:center;
-    color:#8497ad;
-    font-size:12px;
-    line-height:1.6;
-    margin-top:30px
+  text-align:center;
+  color:#8497ad;
+  font-size:12px;
+  line-height:1.6;
+  margin-top:30px;
 }
 
 footer{
-    text-align:center;
-    padding:24px;
-    border-top:1px solid #16263a;
-    color:#778aa1;
-    font-size:12px
+  text-align:center;
+  padding:24px;
+  border-top:1px solid #16263a;
+  color:#778aa1;
+  font-size:12px;
+}
+
+
+/* =========================
+   DETAILS POPUP
+   ========================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  inset:0;
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(6px);
+  padding:18px;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-box{
+  width:100%;
+  max-width:540px;
+  max-height:88vh;
+  overflow-y:auto;
+  background:linear-gradient(
+    145deg,
+    #0b1a2d,
+    #07101d
+  );
+  border:1px solid #258cff;
+  border-radius:18px;
+  padding:26px;
+  position:relative;
+  box-shadow:0 0 40px rgba(37,140,255,.25);
+}
+
+.modal-close{
+  position:absolute;
+  right:14px;
+  top:10px;
+  width:38px;
+  height:38px;
+  border:1px solid #29425e;
+  border-radius:50%;
+  background:#101c2c;
+  color:#fff;
+  font-size:25px;
+  cursor:pointer;
+}
+
+.modal-number{
+  color:#52a8ff;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.modal-box h2{
+  color:#fff;
+  font-size:24px;
+  margin:10px 45px 20px 0;
+}
+
+.modal-box h4{
+  color:#52a8ff;
+  margin:18px 0 7px;
+  font-size:14px;
+}
+
+.modal-box p{
+  color:#c4d2e3;
+  font-size:14px;
+  line-height:1.7;
+  margin:5px 0;
+}
+
+.modal-box ul{
+  color:#c4d2e3;
+  font-size:14px;
+  line-height:1.8;
+  padding-left:22px;
+}
+
+.modal-divider{
+  height:1px;
+  background:#203a58;
+  margin:18px 0;
+}
+
+.modal-register{
+  display:block;
+  text-align:center;
+  margin-top:22px;
+  padding:12px;
+  border-radius:10px;
+  background:#1686ff;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  h1{
+    font-size:30px;
+  }
+
+  .hero h2{
+    font-size:11px;
+    line-height:1.5;
+  }
+
+  .tag{
+    font-size:13px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .buttons{
+    gap:7px;
+  }
+
+  .modal{
+    padding:12px;
+  }
+
+  .modal-box{
+    padding:22px;
+    max-height:90vh;
+  }
+
+  .modal-box h2{
+    font-size:21px;
+  }
+
 }
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+     ========================= -->
 
 <header class="hero">
 
@@ -194,6 +354,11 @@ THINK • BUILD • LAUNCH
 </header>
 
 
+
+<!-- =========================
+     COMPETITIONS
+     ========================= -->
+
 <main class="wrap">
 
 <h2 class="title">
@@ -204,7 +369,9 @@ COMPETITIONS
 <div class="grid">
 
 
-<!-- 01 SPACE QUIZ -->
+<!-- =========================
+     01 QUIZ
+     ========================= -->
 
 <article class="card">
 
@@ -223,9 +390,12 @@ Two-round space quiz
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('quiz')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -241,7 +411,9 @@ Register
 
 
 
-<!-- 02 DRAWING -->
+<!-- =========================
+     02 DRAWING
+     ========================= -->
 
 <article class="card">
 
@@ -260,9 +432,12 @@ Drawing competition
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('drawing')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -278,7 +453,9 @@ Register
 
 
 
-<!-- 03 ESSAY -->
+<!-- =========================
+     03 ESSAY
+     ========================= -->
 
 <article class="card">
 
@@ -297,9 +474,12 @@ Essay writing competition
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('essay')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -315,7 +495,9 @@ Register
 
 
 
-<!-- 04 IDEATHON -->
+<!-- =========================
+     04 IDEATHON
+     ========================= -->
 
 <article class="card">
 
@@ -334,9 +516,12 @@ Space technology & innovation
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('ideathon')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -352,7 +537,9 @@ Register
 
 
 
-<!-- 05 DEBATE -->
+<!-- =========================
+     05 DEBATE
+     ========================= -->
 
 <article class="card">
 
@@ -371,9 +558,12 @@ Space & technology debate
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('debate')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -389,7 +579,9 @@ Register
 
 
 
-<!-- 06 PHOTOGRAPHY -->
+<!-- =========================
+     06 PHOTOGRAPHY
+     ========================= -->
 
 <article class="card">
 
@@ -408,9 +600,12 @@ Space-themed photography
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('photography')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -426,7 +621,9 @@ Register
 
 
 
-<!-- 07 REEL -->
+<!-- =========================
+     07 REEL
+     ========================= -->
 
 <article class="card">
 
@@ -445,9 +642,12 @@ Space-themed short reel
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('reel')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -463,7 +663,9 @@ Register
 
 
 
-<!-- 08 TREASURE HUNT -->
+<!-- =========================
+     08 TREASURE HUNT
+     ========================= -->
 
 <article class="card">
 
@@ -482,9 +684,12 @@ Clues, decoding & space challenges
 
 <div class="buttons">
 
-<a class="btn details" href="#">
+<button
+class="btn details"
+type="button"
+onclick="openDetails('treasure')">
 View Details
-</a>
+</button>
 
 <a
 class="btn register"
@@ -509,10 +714,461 @@ One hub for posters, rules, venues and registration.
 </main>
 
 
+
 <footer>
 TASTRA · National Space Day 2026
 </footer>
 
+
+
+<!-- =========================
+     DETAILS MODAL
+     ========================= -->
+
+<div
+class="modal"
+id="detailsModal"
+onclick="outsideClose(event)">
+
+<div class="modal-box">
+
+<button
+class="modal-close"
+type="button"
+onclick="closeDetails()">
+×
+</button>
+
+<div
+class="modal-number"
+id="modalNumber">
+</div>
+
+<h2 id="modalTitle">
+</h2>
+
+<div id="modalContent">
+</div>
+
+<a
+id="modalRegister"
+class="modal-register"
+href="#"
+target="_blank"
+rel="noopener noreferrer">
+Register for this event
+</a>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   EVENT DETAILS
+   ========================= */
+
+const events = {
+
+quiz:{
+
+number:"01 · 17 AUGUST 2026",
+
+title:"🚀 Space Quiz",
+
+content:`
+
+<h4>👥 PARTICIPATION</h4>
+<p>Team of 2 members.</p>
+
+<h4>📍 VENUE</h4>
+<p>B Block.</p>
+
+<h4>⏰ TIME</h4>
+<p>2:00 PM – 4:00 PM.</p>
+
+<h4>🎯 FORMAT</h4>
+<p>
+Two-round space quiz covering astronomy,
+space science, Indian space missions,
+aerospace and space technology.
+</p>
+
+<h4>🏆 EVENT STRUCTURE</h4>
+<ul>
+<li>Round 1 – Space & India</li>
+<li>Round 2 – Space Challenge</li>
+</ul>
+
+`,
+
+register:"https://forms.gle/bYhP9L4bdH9RoaKB8"
+
+},
+
+
+
+drawing:{
+
+number:"02 · 17 AUGUST 2026",
+
+title:"🎨 Space-Themed Drawing",
+
+content:`
+
+<h4>👤 PARTICIPATION</h4>
+<p>Individual event.</p>
+
+<h4>📍 VENUE</h4>
+<p>To be announced.</p>
+
+<h4>⏰ TIME</h4>
+<p>2:00 PM – 4:00 PM.</p>
+
+<h4>🎯 EVENT</h4>
+<p>
+Create an original drawing inspired by
+space, astronomy, planets, spacecraft,
+exploration or humanity's future in space.
+</p>
+
+<h4>📌 IMPORTANT</h4>
+<p>
+The artwork should be created according
+to the competition guidelines provided
+by the coordinators.
+</p>
+
+`,
+
+register:"https://forms.gle/8Rf9hkwh74ukqHMw8"
+
+},
+
+
+
+essay:{
+
+number:"03 · 17 AUGUST 2026",
+
+title:"✍️ Space Essay Writing",
+
+content:`
+
+<h4>👤 PARTICIPATION</h4>
+<p>Individual event.</p>
+
+<h4>📍 VENUE</h4>
+<p>To be announced.</p>
+
+<h4>⏰ TIME</h4>
+<p>2:00 PM – 4:00 PM.</p>
+
+<h4>🎯 EVENT</h4>
+<p>
+Participants will write an essay based on
+a space, science, technology or aerospace
+related topic.
+</p>
+
+<h4>📝 FOCUS</h4>
+<p>
+Clarity of thought, originality,
+technical understanding, structure
+and quality of writing.
+</p>
+
+`,
+
+register:"https://docs.google.com/forms/d/e/1FAIpQLSf9Ial7dUTlbqWFKbhZ_cy-nSlITwsDe5y6oq4DpbNck6Kw1A/viewform?usp=header"
+
+},
+
+
+
+ideathon:{
+
+number:"04 · 17 AUGUST 2026",
+
+title:"💡 Space-Tech Ideathon",
+
+content:`
+
+<h4>👥 TEAM</h4>
+<p>2–4 members.</p>
+
+<h4>📍 VENUE</h4>
+<p>To be announced.</p>
+
+<h4>⏰ TIME</h4>
+<p>2:00 PM – 4:00 PM.</p>
+
+<h4>🎯 CHALLENGE</h4>
+<p>
+Develop an innovative idea that addresses
+a real-world problem using space technology,
+aerospace engineering or related technologies.
+</p>
+
+<h4>💡 WHAT MATTERS</h4>
+<ul>
+<li>Innovation</li>
+<li>Technical feasibility</li>
+<li>Problem relevance</li>
+<li>Impact</li>
+<li>Presentation quality</li>
+</ul>
+
+`,
+
+register:"https://forms.gle/MS4AsJNnWpMmfTbv5"
+
+},
+
+
+
+debate:{
+
+number:"05 · 18 AUGUST 2026",
+
+title:"🗣️ Space Debate",
+
+content:`
+
+<h4>👤 PARTICIPATION</h4>
+<p>Individual event.</p>
+
+<h4>📍 VENUE</h4>
+<p>To be announced.</p>
+
+<h4>⏰ TIME</h4>
+<p>2:00 PM – 4:00 PM.</p>
+
+<h4>🎯 EVENT</h4>
+<p>
+Participants will debate on a space,
+aerospace, science or technology-related
+topic.
+</p>
+
+<h4>🧠 JUDGING</h4>
+<ul>
+<li>Content & knowledge</li>
+<li>Reasoning</li>
+<li>Communication</li>
+<li>Rebuttal</li>
+<li>Overall presentation</li>
+</ul>
+
+`,
+
+register:"https://forms.gle/viNzJVvpwt6WWpG58"
+
+},
+
+
+
+photography:{
+
+number:"06 · 18 AUGUST 2026",
+
+title:"📷 Space Photography Contest",
+
+content:`
+
+<h4>👤 PARTICIPATION</h4>
+<p>Individual event.</p>
+
+<h4>📤 SUBMISSION</h4>
+<p>
+Participants must upload their photograph
+through the registration form.
+</p>
+
+<h4>🎯 THEME</h4>
+<p>
+Space, astronomy, science, technology,
+aerospace or the human connection with
+the universe.
+</p>
+
+<h4>📅 DATE</h4>
+<p>18 August 2026.</p>
+
+<h4>📌 NOTE</h4>
+<p>
+The submitted photograph should follow
+the competition guidelines.
+</p>
+
+`,
+
+register:"https://forms.gle/ZR4XRa4ncuvz1FfGA"
+
+},
+
+
+
+reel:{
+
+number:"07 · 18 AUGUST 2026",
+
+title:"🎬 Space Reel Competition",
+
+content:`
+
+<h4>👤 PARTICIPATION</h4>
+<p>Individual event.</p>
+
+<h4>📤 SUBMISSION</h4>
+<p>
+Participants must upload their short reel
+through the registration form.
+</p>
+
+<h4>🎯 THEME</h4>
+<p>
+Space, astronomy, aerospace, science,
+technology or futuristic exploration.
+</p>
+
+<h4>📅 DATE</h4>
+<p>18 August 2026.</p>
+
+<h4>🎬 FORMAT</h4>
+<p>
+Create an engaging short-form video
+that communicates a space-related idea.
+</p>
+
+`,
+
+register:"https://forms.gle/WW3yd9pvquCDV26Z9"
+
+},
+
+
+
+treasure:{
+
+number:"08 · 18 AUGUST 2026",
+
+title:"🔎 Engineering Space Treasure Hunt",
+
+content:`
+
+<h4>👥 TEAM</h4>
+<p>3–5 members.</p>
+
+<h4>📍 VENUE</h4>
+<p>To be announced.</p>
+
+<h4>⏰ TIME</h4>
+<p>2:00 PM – 4:00 PM.</p>
+
+<h4>🎯 EVENT</h4>
+<p>
+A technical treasure hunt involving
+clues, decoding, engineering challenges
+and space-related challenges.
+</p>
+
+<h4>🧠 SKILLS</h4>
+<ul>
+<li>Logical thinking</li>
+<li>Observation</li>
+<li>Teamwork</li>
+<li>Problem solving</li>
+<li>Decoding</li>
+</ul>
+
+`,
+
+register:"https://forms.gle/r8FbuGRvDFubPuyP7"
+
+}
+
+};
+
+
+
+/* =========================
+   OPEN DETAILS
+   ========================= */
+
+function openDetails(id){
+
+const event = events[id];
+
+document.getElementById("modalNumber").textContent =
+event.number;
+
+document.getElementById("modalTitle").textContent =
+event.title;
+
+document.getElementById("modalContent").innerHTML =
+event.content;
+
+document.getElementById("modalRegister").href =
+event.register;
+
+document.getElementById("detailsModal")
+.classList.add("active");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+
+/* =========================
+   CLOSE DETAILS
+   ========================= */
+
+function closeDetails(){
+
+document.getElementById("detailsModal")
+.classList.remove("active");
+
+document.body.style.overflow="";
+
+}
+
+
+
+/* =========================
+   CLOSE WHEN CLICKING OUTSIDE
+   ========================= */
+
+function outsideClose(event){
+
+if(event.target.id==="detailsModal"){
+closeDetails();
+}
+
+}
+
+
+
+/* =========================
+   ESC KEY
+   ========================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(event.key==="Escape"){
+closeDetails();
+}
+
+}
+);
+
+</script>
 
 </body>
 </html>
